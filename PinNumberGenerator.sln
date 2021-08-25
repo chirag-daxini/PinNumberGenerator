@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PinNumberGenerator", "PinNumberGenerator\PinNumberGenerator.csproj", "{1F3A3BF6-4D1F-460A-8690-A2053F47DE22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PinNumberGenerator.Domain", "PinNumberGenerator.Domain\PinNumberGenerator.Domain.csproj", "{07CECDBA-E757-4CCF-B424-3D6CA1E12D8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PinNumberGenerator.Web", "PinNumberGenerator.Web\PinNumberGenerator.Web.csproj", "{C8F7217D-CD41-499E-B09B-64EFD0F00CE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PinNumberGenerator.Tests", "PinNumberGenerator.Tests\PinNumberGenerator.Tests.csproj", "{D269E845-44A6-4BE7-939B-226701F1CFC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PinNumberGenerator.Messages", "PinNumberGenerator.Messages\PinNumberGenerator.Messages.csproj", "{984AB635-218E-4CE3-9CCB-51216771100D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F3A3BF6-4D1F-460A-8690-A2053F47DE22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F3A3BF6-4D1F-460A-8690-A2053F47DE22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F3A3BF6-4D1F-460A-8690-A2053F47DE22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F3A3BF6-4D1F-460A-8690-A2053F47DE22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07CECDBA-E757-4CCF-B424-3D6CA1E12D8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07CECDBA-E757-4CCF-B424-3D6CA1E12D8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07CECDBA-E757-4CCF-B424-3D6CA1E12D8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07CECDBA-E757-4CCF-B424-3D6CA1E12D8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8F7217D-CD41-499E-B09B-64EFD0F00CE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8F7217D-CD41-499E-B09B-64EFD0F00CE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8F7217D-CD41-499E-B09B-64EFD0F00CE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8F7217D-CD41-499E-B09B-64EFD0F00CE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D269E845-44A6-4BE7-939B-226701F1CFC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D269E845-44A6-4BE7-939B-226701F1CFC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D269E845-44A6-4BE7-939B-226701F1CFC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D269E845-44A6-4BE7-939B-226701F1CFC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{984AB635-218E-4CE3-9CCB-51216771100D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{984AB635-218E-4CE3-9CCB-51216771100D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{984AB635-218E-4CE3-9CCB-51216771100D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{984AB635-218E-4CE3-9CCB-51216771100D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4274D6CC-9B0A-4402-8BAE-892AAFDD68EA}
+	EndGlobalSection
+EndGlobal
