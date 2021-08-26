@@ -35,7 +35,6 @@ namespace PinNumberGenerator.Tests
 
             Assert.IsFalse(duplicates.Any());
         }
-
         [TestMethod]
         public async Task Should_Generate_UniquePin_Length_Of_four()
         {
@@ -53,7 +52,6 @@ namespace PinNumberGenerator.Tests
             }
             Assert.IsFalse(responses.Any(x => isObiviousNumber(x.Pin)));
         }
-
         private bool isObiviousNumber(string phoneNumber)
         {
             return regExNumber.IsMatch(phoneNumber);

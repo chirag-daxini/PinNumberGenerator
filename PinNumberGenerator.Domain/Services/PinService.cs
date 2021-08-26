@@ -20,19 +20,19 @@ namespace PinNumberGenerator.Domain.Services
         }
         public async Task<GenerateNewPinResponse> GeneratePin()
         {
-            var code = GenerateSecurePin();
+            var code = await GenerateSecurePin();
             return new GenerateNewPinResponse() { Pin = code };
         }
-        private string GenerateSecurePin()
+        private async Task<string> GenerateSecurePin()
         {
             var bytes = new byte[sizeof(ulong)];
             _crypto.GetBytes(bytes);
             var uint32 = BitConverter.ToUInt64(bytes, 0);
             var int31 = uint32 >> 1;
-            var returnstring = (int31 % 10000).ToString("D4");
-            if (regExNumber.IsMatch(returnstring))
-                return GenerateSecurePin();
-            return returnstring;
+            var securePin = (int31 % 10000).ToString("D4");
+            if (regExNumber.IsMatch(securePin))
+                return await GenerateSecurePin();
+            return securePin;
         }
     }
 }
