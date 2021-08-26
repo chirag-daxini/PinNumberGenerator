@@ -2,7 +2,7 @@
 {
     public class GenerateNewPinResponse
     {
-        public string PIN { get; set; }
+        public string Pin { get; set; }
 
         public string Words { get; set; }
     }
