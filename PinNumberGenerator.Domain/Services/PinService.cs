@@ -1,6 +1,7 @@
 ﻿using PinNumberGenerator.Messages;
 using System;
 using System.Security.Cryptography;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace PinNumberGenerator.Domain.Services
@@ -11,24 +12,27 @@ namespace PinNumberGenerator.Domain.Services
     }
     public class PinService : IPinService
     {
+        private readonly RandomNumberGenerator _crypto;
+        private Regex regExNumber = new Regex(Constants.RegularExpression.DEFAULT_EXPRESSION);
         public PinService()
         {
-
+            _crypto = RandomNumberGenerator.Create();
         }
         public async Task<GenerateNewPinResponse> GeneratePin()
         {
-            var code = GenerateSecurityCode();
+            var code = GenerateSecurePin();
             return new GenerateNewPinResponse() { Pin = code };
         }
-
-        private string GenerateSecurityCode()
+        private string GenerateSecurePin()
         {
-            var buffer = new byte[sizeof(ulong)];
-            var cryptoRng = new RNGCryptoServiceProvider();
-            cryptoRng.GetBytes(buffer);
-            var num = BitConverter.ToUInt64(buffer, 0);
-            var code = num % 10000;
-            return code.ToString().PadLeft(4,'0');
+            var bytes = new byte[sizeof(ulong)];
+            _crypto.GetBytes(bytes);
+            var uint32 = BitConverter.ToUInt64(bytes, 0);
+            var int31 = uint32 >> 1;
+            var returnstring = (int31 % 10000).ToString("D4");
+            if (regExNumber.IsMatch(returnstring))
+                return GenerateSecurePin();
+            return returnstring;
         }
     }
 }
