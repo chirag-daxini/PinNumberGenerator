@@ -31,6 +31,7 @@ namespace PinNumberGenerator
         {
             services.AddScoped<IPinService, PinService>();
             services.AddMediatR(typeof(GeneratePinHandler).Assembly);
+            services.AddSwaggerGen();
             services.AddControllers().AddApplicationPart(typeof(PinController).Assembly);
         }
 
@@ -47,6 +48,10 @@ namespace PinNumberGenerator
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(endpoint => endpoint.SwaggerEndpoint("/swagger/v1/swagger.json", "Pin Generator"));
 
             app.UseEndpoints(endpoints =>
             {

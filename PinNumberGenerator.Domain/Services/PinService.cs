@@ -27,8 +27,8 @@ namespace PinNumberGenerator.Domain.Services
             var cryptoRng = new RNGCryptoServiceProvider();
             cryptoRng.GetBytes(buffer);
             var num = BitConverter.ToUInt64(buffer, 0);
-            var code = num % 1000000;
-            return code.ToString("D6");
+            var code = num % 10000;
+            return code.ToString().PadLeft(4,'0');
         }
     }
 }
